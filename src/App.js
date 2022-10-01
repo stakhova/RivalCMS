@@ -11,6 +11,8 @@ import LoginPage from "./pages/loginPage/LoginPage";
 import UploadFile from "./pages/uploadFile/UploadFile";
 
 import ViewImg from "./pages/viewImg/ViewImg";
+
+import ViewFile from "./pages/viewFile/ViewFile";
 function App() {
   return (
       <>
@@ -22,8 +24,8 @@ function App() {
                   <Route path="view" element={<View />}/>
                   <Route path="registration" element={<RegistrationPage />}/>
                   <Route path="/" element={<View />}>
-                      <Route path="view" index element={<ViewImg />} />
-                      <Route path="viewList" element={<ViewImg />}/>
+                      <Route path="view" index element={<ViewFile />} />
+                      <Route path="viewList" element={<ViewFile />}/>
                       <Route path="createView" element={<UploadFile/>} />
                       <Route path="addPhoto" element={<ViewImg />} />
                   </Route>

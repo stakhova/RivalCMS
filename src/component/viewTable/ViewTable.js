@@ -7,17 +7,6 @@ import {Switch, SwitchInput, SwitchLabel, SwitchLabelText} from "../customSwitch
 
 
 
-const lists = [
-    { namePage: 'Home_page' , updatePage: 'Updated 5 weeks ago', authorPage:'Joe Bloggs',userPage:'Admin', id:'id1'},
-    { namePage: 'About_page' , updatePage: 'Updated 3 weeks ago', authorPage:'Aoe Bloggs',userPage:'Admin',id:'id2'},
-    { namePage: 'Home_page' , updatePage: 'Updated 2 weeks ago', authorPage:'Joe Bloggs',userPage:'Admin',id:'id3'},
-    { namePage: 'About_page' , updatePage: 'Updated 1 weeks ago', authorPage:'Joe Bloggs',userPage:'Admin',id:'id4'},
-    { namePage: 'Home_page' , updatePage: 'Updated 3 weeks ago', authorPage:'Boe Bloggs',userPage:'Admin',id:'id5'},
-    { namePage: 'About_page' , updatePage: 'Updated 1 weeks ago', authorPage:'Joe Bloggs',userPage:'Admin',id:'id6'},
-    { namePage: 'Home_page' , updatePage: 'Updated 3 weeks ago', authorPage:'Moe Bloggs',userPage:'Admin',id:'id7'},
-
-];
-
 const useSortableData = (items, config = null) => {
     const [sortConfig, setSortConfig] = React.useState(config);
 
@@ -65,7 +54,7 @@ const SortButton = ({ direction, id, onClick, sortBy,nameBut }) => {
     )
 }
 
-const ViewTable =  props => {
+const ViewTable = ({lists, ...props}) => {
     const { items, requestSort, sortConfig } = useSortableData(
         lists,
         props.config
