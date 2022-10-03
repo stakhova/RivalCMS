@@ -8,7 +8,6 @@ const Upload = ({button,icon,text}) => {
             {selectedImage && (
                 <>
                     <UploadImg alt="not fount"  src={URL.createObjectURL(selectedImage)} />
-                    {/*<button onClick={()=>setSelectedImage(null)}>Remove</button>*/}
                 </>
             )}
             <UploadLabel>

@@ -3,12 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Pagination from "../../component/pagination/Pagination";
 import ImgTable from "../../component/imgTable/ImgTable";
 import ImageFilter from "../../component/imageFilter/ImageFilter";
-import UploadImage from "../uploadImage/UploadImage";
 import {UploadButton} from "./ViewImg.style";
 import Upload from "../../component/upload/Upload";
-
-
-
 
 
 const lists = [
@@ -22,9 +18,6 @@ const lists = [
 
 const ViewImg = () => {
 
-    // // To hold the actual data
-    // // const [data, setData] = useState([])
-    // const [loading, setLoading] = useState(true);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [recordsPerPage] = useState(5);

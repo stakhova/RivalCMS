@@ -7,9 +7,6 @@ import {
 
 } from "./Modal.style";
 import CustomLink from "../сustomLink/CustomLink";
-import ThemesSvg from "../../icon/ThemesSvg";
-import PluginsSvg from "../../icon/PluginsSvg";
-import UpdateSvg from "../../icon/UpdateSvg";
 import {EditSvg} from "../../icon/EditSvg";
 import DelSvg from "../../icon/DelSvg";
 import StatusSvg from "../../icon/StatusSvg";

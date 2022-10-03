@@ -7,8 +7,6 @@ const CustomSwitch = ({ isToggled, onToggle, idCheck }) => {
         <Switch>
             <SwitchInput
                 id={idCheck}
-                // checked={isChecked}
-                // onChange={handleSwitch}
                 checked={isToggled}
                 onChange={onToggle}
                 type="checkbox"

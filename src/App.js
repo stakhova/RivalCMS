@@ -7,11 +7,8 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import RegistrationPage from "./pages/registrationPage/RegistrationPage";
 import View from "./pages/view/View";
 import LoginPage from "./pages/loginPage/LoginPage";
-
 import UploadFile from "./pages/uploadFile/UploadFile";
-
 import ViewImg from "./pages/viewImg/ViewImg";
-
 import ViewFile from "./pages/viewFile/ViewFile";
 function App() {
   return (

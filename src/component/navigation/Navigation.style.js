@@ -19,6 +19,9 @@ const NavTitle = styled.div`
 `;
 
 const NavList = styled.ul`
+     //a.active{
+     //  font-weight: 700;
+     //}
       @media (max-width: 666px) {
         display: flex;
         flex-wrap: wrap;

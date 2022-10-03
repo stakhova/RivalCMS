@@ -1,4 +1,4 @@
-// import { NavLink } from "react-router-dom";
+
 import { ErrorMessage, Form, Field, Formik } from "formik";
 import * as Yup from "yup";
 import {
@@ -43,7 +43,6 @@ const RegistrationForm = () => {
                 <Formik
                     initialValues={{ email: "", password: "" }}
                     validationSchema={loginSchema}
-                    // onSubmit={onSubmit}
                 >
                     {({ values, handleChange, handleBlur }) => (
                         <Form>
@@ -55,9 +54,6 @@ const RegistrationForm = () => {
                                 <Field
                                     name="name"
                                     type="text"
-                                    // onChange={handleChange}
-                                    // onBlur={handleBlur}
-                                    // value={values.email}
                                 />
                                 <ErrorMessage
                                     name="email"
@@ -74,9 +70,6 @@ const RegistrationForm = () => {
                                     name="email"
                                     type="email"
                                     validate={validateEmail}
-                                    // onChange={handleChange}
-                                    // onBlur={handleBlur}
-                                    // value={values.email}
                                 />
                                 <ErrorMessage
                                     name="email"
@@ -93,9 +86,6 @@ const RegistrationForm = () => {
                                 <Field
                                     name="password"
                                     type="password"
-                                    // onChange={handleChange}
-                                    // onBlur={handleBlur}
-                                    // value={values.password}
                                     maxLength="12"
                                 />
                                 <ErrorMessage
@@ -105,13 +95,10 @@ const RegistrationForm = () => {
                                 />
                             </InputWrapper>
                             <FormButtonBlock rightBtn>
-                                <Link to='/view'>
+                                <Link to='/ViewFile'>
                                     <FormButton type="submit">Register</FormButton>
                                 </Link>
                             </FormButtonBlock>
-
-
-                            {/*<NavLink to="/register">Registration</NavLink>*/}
                         </Form>
                     )}
                 </Formik>

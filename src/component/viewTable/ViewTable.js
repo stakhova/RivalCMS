@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import {ViewEdit, ViewText} from "../viewElem/ViewElem.style";
+import {ViewEdit, ViewText, ViewTab,AddButton} from "./ViewTable.style";
 import CustomSwitch from "../customSwitch/CustomSwitch";
 import EditttSvg from "../../icon/EditttSvg";
 import Modal from "../modal/Modal";
-import {Switch, SwitchInput, SwitchLabel, SwitchLabelText} from "../customSwitch/CustomSwitch.style";
+import AddSvg from "../../icon/AddSvg";
+import {Link} from "react-router-dom";
 
 
 
@@ -63,9 +64,10 @@ const ViewTable = ({lists, ...props}) => {
 
     const openModal = () => {setShowModal((prev) => !prev);};
     const [showModal, setShowModal] = useState(false);
+    const [disableButton,setDisableButton] = useState(false)
 
     return (
-        <table>
+        <ViewTab>
             <thead>
             <tr>
                 <th>
@@ -104,12 +106,18 @@ const ViewTable = ({lists, ...props}) => {
                         sortBy={sortConfig?.key}
                     />
                 </th>
+                <th>
+                    <Link to='/createView'>
+                        <AddButton><AddSvg/> Add new</AddButton>
+                    </Link>
+                </th>
             </tr>
             </thead>
             <tbody>
             {items.map(list => (
                 <tr key={list.id}>
                     <td> <ViewText bold>{list.namePage}</ViewText></td>
+
                     <td> <ViewText >{list.updatePage}</ViewText></td>
                     <td>
                         <CustomSwitch
@@ -141,6 +149,7 @@ const ViewTable = ({lists, ...props}) => {
                     <td><ViewEdit showModal={showModal}
                                   setShowModal={setShowModal} onClick={openModal}><EditttSvg/></ViewEdit>
                     </td>
+
                     <Modal
                         showModal={showModal}
                         setShowModal={setShowModal}
@@ -148,7 +157,7 @@ const ViewTable = ({lists, ...props}) => {
                 </tr>
             ))}
             </tbody>
-        </table>
+        </ViewTab>
     )
 }
 
