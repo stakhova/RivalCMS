@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Switch,SwitchInput,SwitchLabel,SwitchLabelText} from "./CustomSwitch.style";
 
 
-const CustomSwitch = ({ isToggled, onToggle, idCheck }) => {
+const CustomSwitch = ({  idCheck }) => {
+    const [isToggled, setIsToggled] = useState(false);
+    const onToggle = () =>  {
+        setIsToggled(!isToggled)
+    }
     return (
         <Switch>
             <SwitchInput

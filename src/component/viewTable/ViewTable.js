@@ -60,9 +60,9 @@ const ViewTable = ({lists, ...props}) => {
         lists,
         props.config
     )
-    const [isToggled, setIsToggled] = useState(false);
 
-    const openModal = () => {setShowModal((prev) => !prev);};
+
+    const openModal = () => {setShowModal((prev) => !prev)};
     const [showModal, setShowModal] = useState(false);
     const [disableButton,setDisableButton] = useState(false)
 
@@ -122,11 +122,11 @@ const ViewTable = ({lists, ...props}) => {
                     <td>
                         <CustomSwitch
                             idCheck={list.id}
-                            isToggled={isToggled}
-                            onToggle={() => {
-                                setIsToggled(!isToggled)
-                                console.log(list.id)
-                            }}
+                            // isToggled={isToggled}
+                            // onToggle={() => {
+                            //     setIsToggled(!isToggled)
+                            //     console.log(list.id)
+                            // }}
                         />
                         {/*<Switch>*/}
                         {/*    <SwitchInput*/}
