@@ -2,12 +2,14 @@ import React from 'react'
 import {ImgPicture, ImgText} from "./ImgTable.style";
 import EditttSvg from "../../icon/EditttSvg";
 import {ViewEdit, ViewTab} from "../viewTable/ViewTable.style";
-const ImgTable = ({lists}) => {
+
+
+const ImgTable = ({item}) => {
 
     return (
         <ViewTab>
             <tbody>
-            {lists.map(list => (
+            {item.map(list => (
                 <tr>
                     <td image><ImgPicture><img src={list.image} alt=""/></ImgPicture></td>
                     <td image><ImgText bold>{list.link}</ImgText> </td>
